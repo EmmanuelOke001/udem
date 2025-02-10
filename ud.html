@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Udemy</title>
+  </head>
+  <body>
+    <nav class="bg-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-black text-2xl font-extrabold">
+          <a href="#" class="no-underline container">Udemy</a>
+        </div>
+
+        <div class="hidden md:flex flex-grow mx-4 pl-40">
+          <input
+            type="text"
+            placeholder="Search for anything..."
+            class="w-full px-4 py-2 rounded-full-md border-solid"
+          />
+        </div>
+
+        <ul class="hidden md:flex space-x-8">
+          <li>
+            <a
+              href="#"
+              class="text-black hover:bg-gray-300 px-3 py-2 rounded text-center no-underline"
+              >Udemy for Business</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black hover:bg-gray-300 px-3 py-2 rounded text-center no-underline"
+              >Teach on Udemy</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black hover:bg-gray-300 px-3 py-2 rounded text-center no-underline"
+              >Cart</a
+            >
+          </li>
+        </ul>
+
+        <div class="hidden md:flex space-x-4 no-underline">
+          <a
+            href="#"
+            class="text-black border border-blue-500 px-4 py-2 rounded hover:bg-white hover:text-black no-underline"
+            >Log In</a
+          >
+          <a
+            href="#"
+            class="text-white bg-blue-600 text-white-600 px-4 py-2 rounded hover:bg-gray-400 hover:text-white no-underline"
+            >Sign Up</a
+          >
+        </div>
+
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden">
+      <ul class="bg-red-600 space-y-2 p-4">
+        <li>
+          <a
+            href="#"
+            class="text-white block px-3 py-2 rounded hover:bg-red-500"
+            >Log in</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-white block px-3 py-2 rounded hover:bg-red-500"
+            >Sign up</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-white block px-3 py-2 rounded hover:bg-red-500"
+            >certification preparation</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-white block px-3 py-2 rounded hover:bg-red-500"
+            >My Courses</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-white block px-3 py-2 rounded hover:bg-red-500"
+            >Cart</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner container">
+        <div class="carousel-item active">
+          <div>
+            <img
+              src="../images/lady.jpg"
+              class="d-block w-100 h-80 relative md:hidden"
+              alt="..."
+            />
+          </div>
+          <div
+            class="absolute top-0 text-black bg-white m-12 pl-2 hidden md:block"
+          >
+            <h1>Learning that gets to you</h1>
+            <p class="p-2.5">
+              Skills for your present and future. Get started with us today
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div>
+            <img
+              src="../images/tech.jpg"
+              class="d-block w-100 h-80 relative"
+              alt="..."
+            />
+          </div>
+          <div
+            class="absolute top-0 text-black m-12 bg-white pl-2 hidden md:block"
+          >
+            <h1>
+              The journey of tech does not start<br />
+              in a day, It comes with a dream
+            </h1>
+            <p>
+              Get courses to help you get started and excell in your tech
+              journey here on udemy!!!!
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div>
+            <img
+              src="../images/training.jpg"
+              class="d-block w-100 h-80 md:relative"
+              alt="..."
+            />
+          </div>
+          <div class="md:absolute top-0 text-black m-10 bg-white pl-2">
+            <h1>Skills that drive you <br />forward</h1>
+            <p>
+              Technology and the world of work change fast- with <br />
+              us,you're faster.Get the skills to achieve goals and <br />stay
+              competitive.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <paragraph section> -->
+    <div class="container m-12">
+      <h1>All skills you need in one place</h1>
+      <p class="p-2.5">
+        From critical skills to technical topics, Udemy supports your
+        professional development.
+      </p>
+    </div>
+    <div class="gap-4 pl-28 md:flex hidden">
+      <p>Data science</p>
+      <p>IT certifications</p>
+      <p>Leadership</p>
+      <p>Web Develoment</p>
+      <p>Communication</p>
+      <p>Business Analytics and Intelligence</p>
+    </div>
+    <div class="dropdown md:hidden sm:block">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Data Science
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">IT certification</a></li>
+        <li><a class="dropdown-item" href="#">Leadership</a></li>
+        <li><a class="dropdown-item" href="#">Web Development</a></li>
+        <li><a class="dropdown-item" href="#">Communication</a></li>
+        <li>
+          <a class="dropdown-item" href="#"
+            >Business Analytics and Intellinigence</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="bg-gray-300">
+      <div class="space-x-4 grid flex flex-row lg:grid-cols-6 px-24">
+        <button class="bg-gray-500 rounded-full">
+          CHATGPT <br />4M+listeners
+        </button>
+        <button class="bg-gray-500 rounded-full">
+          Data Sciences <br />7M+listeners
+        </button>
+        <button class="bg-gray-500 rounded-full">
+          Phython <br />47.7M+listeners
+        </button>
+        <button class="bg-gray-500 rounded-full">
+          Machine Learning <br />8M+listeners
+        </button>
+        <button class="bg-gray-500 rounded-full">
+          Deep Learning <br />2M+listeners
+        </button>
+        <button class="bg-gray-500 rounded-full">
+          Artificial Intelligence(AI) <br />3M+listeners
+        </button>
+      </div>
+      <div class="flex flex-row flex-wrap gap-1 my-4 mx-24">
+        <div class="card">
+          <img src="../images/lady.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">
+              CHATGPT Complete Guide:Learn <br />Generative AI, CHATGPT & More
+            </h5>
+            <p class="card-text">Julian Melanson, Benza Maman, Leap...</p>
+            <a href="#" class="btn btn-primary">Bestseller</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/lady.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">
+              CHATGPT Complete Guide:Learn <br />Generative AI, CHATGPT & More
+            </h5>
+            <p class="card-text">Julian Melanson, Benza Maman, Leap...</p>
+            <a href="#" class="btn btn-primary">Bestseller</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/lady.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">
+              CHATGPT Complete Guide:Learn <br />Generative AI, CHATGPT & More
+            </h5>
+            <p class="card-text">Julian Melanson, Benza Maman, Leap...</p>
+            <a href="#" class="btn btn-primary">Bestseller</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/lady.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">
+              CHATGPT Complete Guide:Learn <br />Generative AI, CHATGPT & More
+            </h5>
+            <p class="card-text">Julian Melanson, Benza Maman, Leap...</p>
+            <a href="#" class="btn btn-primary">Bestseller</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-primary border-purple-300">
+          Show all Data Science courses
+        </button>
+      </div>
+    </div>
+
+    <div class="m-10">
+      <h1>Learning focused on your goals</h1>
+    </div>
+    <section class="m-20 flex space-x-40">
+      <nav>
+        <div class="card mb-3 border-purple-300">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="../images/hands-on-practice.jpg"
+                class="img-fluid rounded-start w-20 m-10"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Hands-on training</h5>
+                <p class="card-text">
+                  Up skill effectively with AI-powered coding
+                  exercises,practise tests and quizzes.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3 w-full">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="../images/certificate.jpg"
+                class="img-fluid rounded-start w-20 m-10"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Hands-on training</h5>
+                <p class="card-text">
+                  Up skill effectively with AI-powered coding
+                  exercises,practise tests and quizzes.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="../images/grp.jpg"
+                class="img-fluid rounded-start w-20 m-10"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Hands-on training</h5>
+                <p class="card-text">
+                  Up skill effectively with AI-powered coding
+                  exercises,practise tests and quizzes.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="../images/organizations-2.jpg"
+                class="img-fluid rounded-start w-20 m-10"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Hands-on training</h5>
+                <p class="card-text">
+                  Up skill effectively with AI-powered coding
+                  exercises,practise tests and quizzes.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="">
+        <img src="../images/contain.jpg" alt="" class="w-full h-auto" />
+      </div>
+    </section>
+
+<div class="m-10 space-x-4">
+  <h1>See what others are achieving through learning</h1>
+</div>
+<section class="flex space-x-6 m-10">
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h1 class="card-title"></h1>
+    <p class="card-text">Udemy was rated the most popular online course or certification program for learning how to code according to</p>
+    <a href="#">StackOverflow’s 2023 Developer survey.</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h1 class="card-title"></h1>
+    <p class="card-text">Udemy was truly a game-changer and a great guide for me as we brought Dimensional to life.</p>
+    <div class="flex m-2 gap-6 font-thin">
+      <img src="../images/Alvin_Lim.jpg" alt="" class="h-10 w-10 rounded-full" >
+      <p>Alvin Lim
+Technical Co-Founder, CTO at Dimensional</p>
+    </div>
+    
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h1 class="card-title"></h1>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <div class="flex m-2 gap-6 font-thin">
+      <img src="../images/William_A_Wachlin.jpg" alt="" class="h-10 w-10 rounded-full" >
+      <p>William A. Wachlin
+Partner Account Manager at Amazon Web Services</p>
+    </div>
+    
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h1 class="card-title"></h1>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <div class="flex m-2 gap-6 font-thin">
+      <img src="../images/Ian_Stevens.jpg" alt="" class="h-10 w-10 rounded-full">
+      <p>Ian Stevens
+      Head of Capability Development, North America at Publicis Sapient</p>
+    </div>
+    
+  </div>
+</div>
+</section>
+
+  <footer class="bg-gray-600 py-10">
+    <div class="container mx-auto px-2 text-white">
+        <span class="flex font-bold text-2xl">
+          <p>Top companies choose 
+            <a href="#">Udemy business</a>
+            to build in-demand career skills.
+          </p>
+        </span>
+    </div>
+  </footer>
+ 
+  <footer class="bg-gray-800 py-10 ">
+    <div class="container mx-auto px-2 text-white">
+      <span class="font-extrabold text-xl">
+        <p>Explore top skills and certifications</p>
+      </span>
+    </div>
+    <div class="grid grid-cols-4">
+      <div class="container mx-auto px-2 text-white">
+        <div class="container mx-auto px-2 text-white ">
+        <span class="font-extrabold text-lg">
+          <p>Certifications by Issuer</p>
+        </span>
+        <span class="hover-text-underline">
+          <p>Amazon Web Services(AWS) Certification</p>
+          <p>Six Sigma Certifications</p>
+          <p>Microsoft Certifications</p>
+          <p>Cisco Certifications</p>
+          <p>Tableau Certifications</p>
+          <p>See all Certifications</p>
+        </span>
+      </div>
+      </div>
+      <div class="container mx-auto px-2 text-white">
+        <div class="container mx-auto px-2 text-white">
+        <span class="font-extrabold text-lg">
+          <p>Web Development</p>
+        </span>
+        <span class="hover-text-underline">
+          <p>Web Development</p>
+          <p>Javascript</p>
+          <p>React js</p>
+          <p>Angular</p>
+          <p>Java</p>
+        </span>
+      </div> 
+    </div> 
+      <div class="container mx-auto px-2 text-white">
+        <div class="container mx-auto px-2 text-white">
+        <span class="font-extrabold text-lg">
+          <p>IT Certifications</p>
+        </span>
+        <span class="hover-text-underline">
+          <p>Amazon AWS</p>
+          <p>AWS Certified Cloud Practitioner</p>
+          <p>AZ-900:Microsoft Azure Fundamentals</p>
+          <p>AWS  Certified Solutions Architet-Associate</p>
+          <p>Kubernets</p>
+        </span>
+        </div>
+    </div>
+    <div class="container mx-auto px-2 text-white">
+        <div class="container mx-auto px-2 text-white">
+        <span class="font-extrabold text-lg">
+          <p>Leadership</p>
+        </span>
+        <span class="hover-text-underline">
+          <p>Leadership</p>
+          <p>Management Skills</p>
+          <p>Project Management</p>
+          <p>Personal Productivity</p>
+          <p>Emotional Intelligence</p>
+        </span>
+        </div>
+    </div>
+    <div class="container mx-auto px-2 text-white">
+        <div class="container mx-auto px-2 text-white">
+        <span class="font-extrabold text-lg">
+          <p>Certifications by Skill</p>
+        </span>
+        <span class="hover-text-underline">
+          <p>Cybersecurity Certification</p>
+          <p>Project Management Certification</p>
+          <p>Cloud Certification</p>
+          <p>Data Analysis Certification</p>
+          <p>HR Management Certification</p>
+          <p>See all Certifications</p>
+        </span>
+        </div>
+    </div>
+        <div class="container mx-auto px-2 text-white">
+        <div class="container mx-auto px-2 text-white">
+        <span class="font-extrabold text-lg">
+          <p>Data Science</p>
+        </span>
+        <span class="hover-text-underline">
+          <p>Data Science</p>
+          <p>Python</p>
+          <p>Machine Learning</p>
+          <p>CHATGPT</p>
+          <p>Deep Learning</p>
+        </span>
+        </div>
+    </div>
+            <div class="container mx-auto px-2 text-white">
+        <div class="container mx-auto px-2 text-white">
+        <span class="font-extrabold text-lg">
+          <p>Communication</p>
+        </span>
+        <span class="hover-text-underline">
+          <p>Communication Skills</p>
+          <p>Presentation Skills</p>
+          <p>Public Speaking</p>
+          <p>Writing</p>
+          <p>PowerPoint</p>
+        </span>
+        </div>
+    </div>
+            <div class="container mx-auto px-2 text-white">
+        <div class="container mx-auto px-2 text-white">
+        <span class="font-extrabold text-lg">
+          <p>Business Analytics & Intelligence</p>
+        </span>
+        <span class="hover-text-underline">
+          <p>Microsoft Exel</p>
+          <p>SQL</p>
+          <p>Microsoft Power BI</p>
+          <p>Data Analysis</p>
+          <p>Business Analysis</p>
+        </span>
+        </div>
+    </div>
+    
+  </div>
+</footer>
+
+  </body>
+</html>
